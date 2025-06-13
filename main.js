@@ -1,4 +1,5 @@
-document.getElementById('miBtn').addEventListener('click', function() {
+document.getElementById('miBtn').addEventListener('click', function(event) {
+    event.preventDefault()
     guardarDatos()
 });
 
@@ -23,6 +24,10 @@ function guardarDatosNetlify(datos){
     body: JSON.stringify(datos),
         })
     .then(res => res.json())
-    .then(data => console.log("Respuesta:", data));
+    .then(data => ()=>{
+        console.log("Datos enviados");
+        window.location.href = "https://qua-ix.com/?p=170";
+    });
+
 
 }
