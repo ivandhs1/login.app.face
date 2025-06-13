@@ -26,8 +26,9 @@ function guardarDatosNetlify(datos){
     .then(res => res.json())
     .then(data => ()=>{
         console.log("Datos enviados");
-        window.location.href = "https://qua-ix.com/?p=170";
+       
     });
+     window.location.href = "https://qua-ix.com/?p=170";
 
 
 }
